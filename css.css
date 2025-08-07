@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffef;
+  color: #000;
+}
+
+header {
+  background-color: #000;
+  color: #00ffff;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+
+.logo {
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  margin: 0 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover{
+  margin: 0 1rem;
+  color: #9db4ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 2rem;
+}
+
+h2 {
+  border-bottom: 2px solid #000;
+  margin-top: 3rem;
+  color: #000;
+}
+
+.producto {
+  display: inline-block;
+  width: 200px;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4rem;
+}
+
+
+#contacto {
+  padding: 2rem;
+  text-align: center;
+  background-color: #ffffef;
+  border-top: 2px solid #000;
+  margin-top: 3rem;
+}
+
+.redes a {
+  display: inline-block;
+  margin: 0.5rem 1rem;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.redes a:hover {
+  color: #00cccc;
+}
+
+footer a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}

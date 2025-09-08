@@ -6,8 +6,8 @@ body {
 }
 
 header {
-  background-color: #000;
-  color: #00ffff;
+  background-color: #2C7351;
+  color: #2C7351;
   padding: 1rem;
   text-align: center;
 }
@@ -43,9 +43,9 @@ main {
 }
 
 h2 {
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #2C7351;
   margin-top: 3rem;
-  color: #000;
+  color: #2C7351;
 }
 
 .producto {
@@ -65,7 +65,7 @@ h2 {
 }
 
 footer {
-  background-color: #000;
+  background-color: #2C7351;
   color: #fff;
   text-align: center;
   padding: 1rem;
@@ -77,14 +77,13 @@ footer {
   padding: 2rem;
   text-align: center;
   background-color: #ffffef;
-  border-top: 2px solid #000;
   margin-top: 3rem;
 }
 
 .redes a {
   display: inline-block;
   margin: 0.5rem 1rem;
-  color: #000;
+  color: #2C7351;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   text-decoration: none;
@@ -93,7 +92,7 @@ footer {
 }
 
 .redes a:hover {
-  color: #00cccc;
+  color: #000000;
 }
 
 footer a {
@@ -104,3 +103,26 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+    .producto {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin: 10px;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .detalle {
+      font-size: 14px;
+      margin: 4px 0;
+    }
+    .sin-stock {
+      color: white;
+      background-color: red;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 8px;
+    }

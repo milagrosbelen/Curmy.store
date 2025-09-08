@@ -8,14 +8,14 @@ body {
 header {
   background-color: #2C7351;
   color: #ffffef;
-  padding: 1rem;
+  padding: 2rem;
   text-align: center;
 }
 
 
 
 .logo {
-  max-width: 200px;
+  max-width: 300px;
   height: auto;
   display: block;
   margin: 0 auto;

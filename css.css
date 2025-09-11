@@ -1,48 +1,132 @@
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #ffffef;
-  color: #000;
-}
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffef;
+      color: #000;
+    }
 
-header {
-  background-color: #2C7351;
-  color: #ffffef;
-  padding: 2rem;
+    header {
+      background-color: #2C7351;
+      color: #ffffef;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 300px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #9db4ff;
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    h2 {
+      border-bottom: 2px solid #2C7351;
+      margin-top: 3rem;
+      color: #2C7351;
+    }
+    #tips{
+       font-size: 14px;
+      color: #555;                /* gris suave */
+      background: #f0f0f0;        /* fondo claro */
+      padding: 6px 12px;
+      border-radius: 6px;
+      max-width: fit-content;
+      margin: 10px auto;          /* lo centra horizontalmente */
+      opacity: 0.7;               /* 👈 se ve pero no molesta */
+      font-style: italic;
+    }
+
+    .productos {
+    display: flex;
+    flex-wrap: wrap;          /* hace que pasen a la siguiente fila si no entran */
+    gap: 20px;                /* espacio entre tarjetas */
+    justify-content: center;  /* centra las tarjetas en la fila */
+    }
+
+    .producto {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
   text-align: center;
-}
+  width: 220px;             /* 👈 todas las tarjetas mismo ancho */
+    }
+    .producto:hover {
+      transform: scale(1.05);
+    }
 
-
-
-.logo {
-  max-width: 300px;
-  height: auto;
+    .producto img {
+  width: 100%;
+  height: 280px;            /* 👈 todas las imágenes mismo alto */
+  object-fit: cover;
+  border-radius: 8px;
   display: block;
-  margin: 0 auto;
-}
+    }
+    .producto p {
+      margin: 8px 0 0;
+      font-weight: bold;
+    }
 
-nav {
-  margin-top: 1rem;
-}
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+    }
 
-nav a {
-  margin: 0 1rem;
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-}
-nav a:hover{
-  margin: 0 1rem;
-  color: #9db4ff;
-  text-decoration: none;
-  font-weight: bold;
-}
+    .modal-contenido {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 400px;
+      position: relative;
+      min-width: 300px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
 
-main {
-  padding: 2rem;
-}
+    .cerrar {
+      position: absolute;
+      top: 10px; right: 15px;
+      font-size: 22px;
+      cursor: pointer;
+    }
 
-h2 {
+    footer {
+      background-color: #2C7351;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 4rem;
+    }
+    h2 {
   border-bottom: 2px solid #2C7351;
   margin-top: 3rem;
   color: #2C7351;
@@ -51,6 +135,7 @@ h2 {
 .producto {
   display: inline-block;
   width: 200px;
+   max-width: 250px; /* Máximo ancho por producto */
   margin: 1rem;
   padding: 1rem;
   background-color: #fff;
@@ -60,17 +145,13 @@ h2 {
 }
 
 .producto img {
-  width: 100%;
+    width: 100%;
+  height: 280px;       /* altura fija */
+  object-fit: cover;    /* mantiene proporciones y recorta si es necesario */
   border-radius: 5px;
 }
 
-footer {
-  background-color: #2C7351;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 4rem;
-}
+
 
 
 #contacto {
@@ -101,35 +182,69 @@ footer a {
 }
 
 footer a:hover {
-  text-decoration: underline;
+      text-decoration: underline;
 }
-    .producto {
+.producto {
       border: 1px solid #ccc;
       padding: 15px;
       margin: 10px;
       border-radius: 10px;
-      width: 250px;
+      width: 100%;
       text-align: center;
-      display: inline-block;
-      vertical-align: top;
+      background: #fff;
+      box-sizing: border-box;
+}
+    .wspfijo{
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
     }
-    .detalle {
-      font-size: 14px;
-      margin: 4px 0;
+    .wspfijo img{
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgb(0, 0, 0.3);
+      animation: parpadeo 1.2s infinite;
     }
-    .sin-stock {
-      color: white !important;
-      background-color: red !important;
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-weight: bold;
-      display: inline-block;
-      margin-top: 8px;
+    @keyframes parpadeo {
+      0% { transform: scale(1); box-shadow: 0 0 5px #396c4c; }
+      50% { transform: scale(1.1); box-shadow: 0 0 20px #396c4c; }
+      100% { transform: scale(1); box-shadow: 0 0 5px #396c4c; }
     }
 
-    /* RESPONSIVE */
-@media (max-width: 768px) {
-  nav {
-    justify-content: center;
-  }
+    /* Fondo oscuro detrás del modal */
+#modal {
+  display: none;              /* oculto por defecto */
+  position: fixed;            /* fijo en toda la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6); /* fondo transparente */
+  align-items: center;        /* centra verticalmente */
+  justify-content: center;    /* centra horizontalmente */
+  z-index: 1000;
+}
+
+/* Caja del modal */
+#modal .contenido {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 300px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+/* Botón cerrar */
+#modal .cerrar {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
 }

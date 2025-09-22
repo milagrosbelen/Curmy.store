@@ -96,7 +96,7 @@ h2 {
   object-fit: cover;         /* recorta si no encaja */
   border-radius: 8px;
   display: block;
-  box-shadow: 0 0 15px #53d294, 0 0 30px #3fb97e;
+  box-shadow: 0 0 15px #53d294, 0 0 30px #378e64;
 }
 
 /* Texto dentro de la tarjeta */
@@ -186,18 +186,15 @@ h2 {
   50%  { transform: scale(1.1); box-shadow: 0 0 20px #396c4c; }
   100% { transform: scale(1);   box-shadow: 0 0 5px #396c4c; }
 }
-.productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
-  gap: 2px;
-  justify-content: center;
-}
 
 .producto {
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 10px;
+  padding: 4px;
+  margin: 8px;
   text-align: center;
+  width: 300px;              /* tamaño fijo para todas */
   transition: transform 0.2s;
   box-sizing: border-box;
   cursor: pointer;
@@ -218,4 +215,36 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+}
+
+
+
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+  .productos {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .producto {
+    width: calc(50% - 12px); /* Dos columnas con un pequeño gap */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .producto {
+    width: 100%; /* Una columna en pantallas muy pequeñas */
+  }
+}
+
+/* Para pantallas menores a 400px */
+@media screen and (max-width: 400px) {
+  .productos {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
+  }
+
+  .producto {
+    width: 100%; /* La tarjeta ocupa todo el ancho de su celda */
+  }
 }

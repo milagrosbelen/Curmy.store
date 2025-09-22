@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #ffffef;
+  background-color: #1a1a1a;
   color: #000;
 }
 
@@ -48,6 +48,7 @@ h2 {
   color: #2C7351;
   display: flex;
   justify-content: center;
+  color: white;
 }
 
 /* Texto de tips arriba */
@@ -82,6 +83,7 @@ h2 {
   transition: transform 0.2s;
   box-sizing: border-box;
   cursor: pointer;
+  box-shadow: 0 0 18px 5px #378e64
 }
 
 .producto:hover {
@@ -94,6 +96,7 @@ h2 {
   object-fit: cover;         /* recorta si no encaja */
   border-radius: 8px;
   display: block;
+  box-shadow: 0 0 15px #53d294, 0 0 30px #3fb97e;
 }
 
 /* Texto dentro de la tarjeta */
@@ -140,10 +143,11 @@ h2 {
 
 /* ===== CONTACTO ===== */
 #contacto {
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   background-color: #ffffef;
-  margin-top: 3rem;
+  margin-top: 2rem;
+  border-radius: 10px;
 }
 
 .redes a {
@@ -183,6 +187,18 @@ h2 {
   100% { transform: scale(1);   box-shadow: 0 0 5px #396c4c; }
 }
 
+.producto {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 4px;
+  margin: 8px;
+  text-align: center;
+  width: 300px;              /* tamaño fijo para todas */
+  transition: transform 0.2s;
+  box-sizing: border-box;
+  cursor: pointer;
+}
 /* ===== FOOTER ===== */
 footer {
   background-color: #2C7351;

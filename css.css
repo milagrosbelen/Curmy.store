@@ -51,29 +51,16 @@ h2 {
   color: white;
 }
 
-/* Texto de tips arriba */
-#tips {
-  font-size: 14px;
-  color: #555;
-  background: #f0f0f0;
-  padding: 6px 12px;
-  border-radius: 6px;
-  max-width: fit-content;
-  margin: 10px auto;
-  opacity: 0.7;
-  font-style: italic;
-}
 
 /* ===== TARJETAS DE PRODUCTO ===== */
 .productos {
   display: flex;
   flex-wrap: wrap;           /* permite que los productos bajen de fila */
-  gap: 12px;                 /* espacio entre tarjetas */
+  gap: 5px;                 /* espacio entre tarjetas */
   justify-content: center;   /* centra las tarjetas */
 }
 
 .producto {
-  background: #fff;
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 4px;
@@ -83,7 +70,8 @@ h2 {
   transition: transform 0.2s;
   box-sizing: border-box;
   cursor: pointer;
-  box-shadow: 0 0 18px 5px #378e64
+  box-shadow: 0 0 18px 5px #378e64;
+  background-color: #1a7248;
 }
 
 .producto:hover {
@@ -91,19 +79,25 @@ h2 {
 }
 
 .producto img {
-  width: 100%;
-  height: 280px;             /* altura fija */
+  width: 95%;
+  height: auto;             /* altura fija */
   object-fit: cover;         /* recorta si no encaja */
-  border-radius: 8px;
+  border-radius: 5px;
+  border: 3px solid #00ff84;
   display: block;
   box-shadow: 0 0 15px #53d294, 0 0 30px #378e64;
+  /*efecto neon*/
+  box-shadow: 
+    0 0 5px #00934c,
+    0 0 15px #00934c,
+    0 0 30px #00934c,
+    0 0 50px #00934c;
 }
 
 /* Texto dentro de la tarjeta */
 .producto h3 {
   margin: 9px 0 5px;
-  color: #2C7351;            /* verde como el header */
-  text-decoration:underline;
+  color:white;            /* verde como el header */
 }
 
 .producto p {
@@ -145,7 +139,7 @@ h2 {
 #contacto {
   padding: 1rem;
   text-align: center;
-  background-color: #ffffef;
+  background-color: #1a7248;
   margin-top: 2rem;
   border-radius: 10px;
 }
@@ -153,7 +147,7 @@ h2 {
 .redes a {
   display: inline-block;
   margin: 0.5rem 1rem;
-  color: #2C7351;
+  color: white;
   padding: 0.5rem 1rem;
   border-radius: 5px;
   text-decoration: none;
@@ -187,18 +181,7 @@ h2 {
   100% { transform: scale(1);   box-shadow: 0 0 5px #396c4c; }
 }
 
-.producto {
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 4px;
-  margin: 8px;
-  text-align: center;
-  width: 300px;              /* tamaño fijo para todas */
-  transition: transform 0.2s;
-  box-sizing: border-box;
-  cursor: pointer;
-}
+
 /* ===== FOOTER ===== */
 footer {
   background-color: #2C7351;
@@ -217,34 +200,37 @@ footer a:hover {
   text-decoration: underline;
 }
 
-
-
+.stock{
+  background-color: #378e64;
+}
+ div.info{
+    color: white;
+  }
 
 /* ===== RESPONSIVE ===== */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 720px) {
   .productos {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
   }
 
   .producto {
-    width: calc(50% - 12px); /* Dos columnas con un pequeño gap */
+    width: calc(50% - 10px); /* Dos columnas con gap */
+    margin: 0px; /* ajusta márgenes si quieres */
+    font-size: 15px;
+    height: 20%;
+    background-color: #1a7248;
+
+  }
+  h3{
+    color: white;
+  }
+  div.info{
+    color: white;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .producto {
-    width: 100%; /* Una columna en pantallas muy pequeñas */
-  }
-}
 
-/* Para pantallas menores a 400px */
-@media screen and (max-width: 400px) {
-  .productos {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas iguales */
-  }
 
-  .producto {
-    width: 100%; /* La tarjeta ocupa todo el ancho de su celda */
-  }
-}

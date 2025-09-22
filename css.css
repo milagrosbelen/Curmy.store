@@ -186,15 +186,18 @@ h2 {
   50%  { transform: scale(1.1); box-shadow: 0 0 20px #396c4c; }
   100% { transform: scale(1);   box-shadow: 0 0 5px #396c4c; }
 }
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+  gap: 2px;
+  justify-content: center;
+}
 
 .producto {
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 10px;
-  padding: 4px;
-  margin: 8px;
   text-align: center;
-  width: 300px;              /* tamaño fijo para todas */
   transition: transform 0.2s;
   box-sizing: border-box;
   cursor: pointer;

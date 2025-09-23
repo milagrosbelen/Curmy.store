@@ -39,7 +39,7 @@ nav a:hover {
 
 /* ===== CONTENIDO PRINCIPAL ===== */
 main {
-  padding: 2rem;
+  padding: 3rem;
 }
 
 h2 {
@@ -63,7 +63,7 @@ h2 {
 .producto {
   border: 1px solid #ccc;
   border-radius: 10px;
-  padding: 4px;
+  padding: 1px;
   margin: 8px;
   text-align: center;
   width: 230px;              /* tamaño fijo para todas */
@@ -79,21 +79,24 @@ h2 {
 }
 
 .producto img {
-  width: 95%;
+  width: 98%;
   height: auto;             /* altura fija */
   object-fit: cover;         /* recorta si no encaja */
-  border-radius: 5px;
+  border-radius: 8px;
   border: 3px solid #00ff84;
   display: block;
   box-shadow: 0 0 15px #53d294, 0 0 30px #378e64;
   /*efecto neon*/
   box-shadow: 
-    0 0 5px #00934c,
+    0 0 18px #00934c,
     0 0 15px #00934c,
     0 0 30px #00934c,
-    0 0 50px #00934c;
+    0 0 90px #00934c;
 }
 
+#conjuntoimg{
+  height: 80%;
+}
 /* Texto dentro de la tarjeta */
 .producto h3 {
   margin: 9px 0 5px;
@@ -135,13 +138,20 @@ h2 {
   color: red;
 }
 
+
+footer {
+  background-color: #2C7351;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+ 
+}
 /* ===== CONTACTO ===== */
 #contacto {
-  padding: 1rem;
   text-align: center;
-  background-color: #1a7248;
   margin-top: 2rem;
   border-radius: 10px;
+  height: 30%;
 }
 
 .redes a {
@@ -183,13 +193,7 @@ h2 {
 
 
 /* ===== FOOTER ===== */
-footer {
-  background-color: #2C7351;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 4rem;
-}
+
 
 footer a {
   color: #00ffff;
@@ -206,6 +210,12 @@ footer a:hover {
  div.info{
     color: white;
   }
+  #footerp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
 
 /* ===== RESPONSIVE ===== */
 @media screen and (max-width: 720px) {
@@ -219,8 +229,8 @@ footer a:hover {
   .producto {
     width: calc(50% - 10px); /* Dos columnas con gap */
     margin: 0px; /* ajusta márgenes si quieres */
-    font-size: 15px;
-    height: 20%;
+    font-size: 14px;
+    height: 10%;
     background-color: #1a7248;
 
   }

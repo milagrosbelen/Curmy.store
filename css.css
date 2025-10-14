@@ -6,6 +6,7 @@ body {
   color: #000;
 }
 
+
 /* ===== HEADER ===== */
 header {
   background: linear-gradient(90deg, #3C8D68, #2C7351);
@@ -13,7 +14,7 @@ header {
   top: 0;
   z-index: 1000;
   color: #ffffef;
-  padding: 3rem;
+  padding: 2rem;
   text-align: center;
 }
 
@@ -30,6 +31,7 @@ color: #fff;
 text-decoration: none;
 font-weight: 600;
 transition: color 0.3s;
+font-size: 20px;
 }
 
 nav a {
@@ -112,16 +114,18 @@ h2 {
 
 }
 
-.info{
+.info {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: #fff;
+  color: black;
 }
-.info p{
-  color: #272727;
+.info p {
+  color: black;
 }
+
 
 footer {
   background: linear-gradient(90deg, #3C8D68, #2C7351);
@@ -130,6 +134,29 @@ footer {
   padding: 2rem;
  
 }
+
+
+/* STYLE A EL STOCK */
+.stock {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+/* Disponible */
+.info .stock.disponible {
+  color: #1e7a46;
+  background-color: #e3f9eb;
+}
+
+/* Sin stock */
+.info .stock.sin-stock {
+  color: #a31414;
+  background-color: #fde0e0;
+}
+
 /* ===== CONTACTO ===== */
 #contacto {
   text-align: center;
@@ -189,9 +216,6 @@ footer a:hover {
   text-decoration: underline;
 }
 
-.stock{
-  background-color: #378e64;
-}
  div.info{
     color: white;
   }

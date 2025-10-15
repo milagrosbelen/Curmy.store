@@ -14,12 +14,12 @@ header {
   top: 0;
   z-index: 1000;
   color: #ffffef;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
 .logo {
-  max-width: 200px;
+  max-width: 190px;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -31,7 +31,7 @@ color: #fff;
 text-decoration: none;
 font-weight: 600;
 transition: color 0.3s;
-font-size: 20px;
+font-size: 16px;
 }
 
 nav a {

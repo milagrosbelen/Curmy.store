@@ -328,7 +328,36 @@ footer a:hover {
       transition: all 0.3s;
     }
 
-/* ===== RESPONSIVE ===== */
+
+
+    /* Botón para volver arriba */
+#btnSubir {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* 👈 Ahora a la izquierda */
+  background-color: #256144; /* verde oscuro Curmy */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: none; /* Oculto al principio */
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#btnSubir:hover {
+  background-color: #2e7a56;
+  transform: scale(1.1);
+}
+
+
+
+
+    /* ===== RESPONSIVE ===== */
 @media screen and (max-width: 720px) {
   .productos {
     display: flex;

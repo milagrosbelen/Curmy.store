@@ -18,8 +18,8 @@
 
 
     <nav id="navbar">
-      <a href="#shorts-andar">Shorts Casual</a>
       <a href="#shorts-futbol">Shorts de Futbol</a>
+      <a href="#shorts-andar">Shorts Casual</a>
       <a href="#remeras">Remeras</a>
 
     </nav>
@@ -290,6 +290,8 @@
       </div>
     </section>
  
+      <!-- Botón para volver arriba -->
+  <button id="btnSubir" title="Volver arriba">↑</button>
 
   <div class="wspfijo">
       <a href="https://wa.me/543515223831" target="_blank">
@@ -317,6 +319,29 @@
   enlaces.forEach((enlace) => {
     enlace.addEventListener("click", () => {
       navbar.classList.remove("active");
+    });
+  });
+
+
+
+
+
+  // Mostrar u ocultar el botón al hacer scroll
+  const btnSubir = document.getElementById("btnSubir");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) { 
+      btnSubir.style.display = "block";
+    } else {
+      btnSubir.style.display = "none";
+    }
+  });
+
+  // Volver arriba al hacer clic
+  btnSubir.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
     });
   });
 </script>

@@ -7,16 +7,105 @@ body {
 }
 
 
-/* ===== HEADER ===== */
+/* --- RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f8f8;
+}
+
+/* --- HEADER --- */
 header {
-  background: linear-gradient(90deg, #3C8D68, #2C7351);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #256144;
+  padding: 10px 20px;
   position: sticky;
   top: 0;
   z-index: 1000;
-  color: #ffffef;
-  padding: 1rem;
-  text-align: center;
 }
+
+.logo {
+  height: 60px;
+}
+
+/* --- NAVBAR --- */
+#navbar {
+  display: flex;
+  gap: 20px;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#navbar a:hover {
+  color: #a4d9b6;
+}
+
+/* --- MENÚ HAMBURGUESA --- */
+.menu-toggle {
+  display: none; /* oculto en PC */
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  /* Ocultar los enlaces por defecto */
+  #navbar {
+    display: none;
+    flex-direction: column;
+    background-color: #256144;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  /* Mostrar el menú cuando está activo */
+  #navbar.active {
+    display: flex;
+  }
+
+  /* Mostrar el ícono ☰ en celular */
+  .menu-toggle {
+    display: block;
+  }
+
+  #navbar a {
+    display: block;
+    padding: 12px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== HEADER ===== */
 
 .logo {
   max-width: 190px;
@@ -56,7 +145,8 @@ h2 {
   color: #2C7351;
   display: flex;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1rem;
+  padding: 12px;
 }
 
 
@@ -64,7 +154,7 @@ h2 {
 .productos {
   display: flex;
   flex-wrap: wrap;           /* permite que los productos bajen de fila */
-  gap: 5px;                 /* espacio entre tarjetas */
+  gap: 10px;                 /* espacio entre tarjetas */
   justify-content: center;   /* centra las tarjetas */
 }
 
@@ -96,7 +186,7 @@ h2 {
 .producto h3 {
   margin: 9px 0 5px;
   color: #1a7248;            /* verde como el header */
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .producto p {
@@ -121,6 +211,7 @@ h2 {
   flex-direction: column;
   background-color: #fff;
   color: black;
+  padding: 5px;
 }
 .info p {
   color: black;
@@ -160,7 +251,7 @@ footer {
 /* ===== CONTACTO ===== */
 #contacto {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
   border-radius: 10px;
   height: 30%;
 }

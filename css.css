@@ -33,7 +33,7 @@ header {
 }
 
 .logo {
-  height: 60px;
+  height: 80px;
 }
 
 /* --- NAVBAR --- */
@@ -178,7 +178,7 @@ h2 {
 }
 
 .producto img {
-  width: 98%;
+  width: 100%;
   height: auto;             /* altura fija */
   object-fit: cover;         /* recorta si no encaja */
   border-radius: 5px;

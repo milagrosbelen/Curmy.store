@@ -252,9 +252,7 @@ h2 {
 }
 /* ETIQUETA STOCK GENERAL */
 .stock {
-  position: relative;
-  bottom: 30px;
-  right: 23px;
+  
   padding: 1px 6px;
   border-radius: 8px;
   font-size: 0.6rem;

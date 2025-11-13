@@ -252,12 +252,12 @@ h2 {
 }
 /* ETIQUETA STOCK GENERAL */
 .stock {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+  position: relative;
+  bottom: 35px;
+  right: 65px;
   padding: 4px 10px;
   border-radius: 8px;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -266,12 +266,14 @@ h2 {
 
 /* VERDE = DISPONIBLE */
 .stock.disponible {
-  background-color: rgba(10, 52, 26, 0.9); /* verde oscuro */
+  background-color: rgba(3, 241, 94, 0.9); /* verde oscuro */
 }
 
 /* ROJO = SIN STOCK */
 .stock.sin-stock {
-  background-color: rgba(180, 0, 0, 0.9); /* rojo con transparencia */
+  background-color: rgba(255, 36, 36, 0.9); /* rojo con transparencia */
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
 }
 .producto img {
   width: 100%;

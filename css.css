@@ -1,7 +1,7 @@
 /* ===== ESTILOS GENERALES ===== */
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #f5f5f5;
   color: #000;
 }
@@ -20,88 +20,91 @@ body {
   scroll-behavior: smooth;
 }
 
-/* --- HEADER --- */
+/* HEADER */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #256144;
-  padding: 10px 20px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.logo {
-  height: 80px;
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-/* --- NAVBAR --- */
+header h1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+header h1 span {
+  color: #2ad177;
+}
+
+/* NAV */
 #navbar {
   display: flex;
   gap: 20px;
 }
 
 #navbar a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  position: relative;
   transition: color 0.3s ease;
 }
 
+#navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #2ad177;
+  transition: width 0.3s ease;
+}
+
 #navbar a:hover {
-  color: #a4d9b6;
+  color: #2ad177;
 }
 
-/* --- MENÚ HAMBURGUESA --- */
+#navbar a:hover::after {
+  width: 100%;
+}
+
+/* MENU MOBILE */
 .menu-toggle {
-  display: none; /* oculto en PC */
+  display: none;
   font-size: 2rem;
-  color: white;
   cursor: pointer;
+  color: #fff;
 }
 
-/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
-  /* Ocultar los enlaces por defecto */
   #navbar {
     display: none;
     flex-direction: column;
-    background-color: #256144;
+    background: #111;
     position: absolute;
     top: 80px;
     right: 0;
     width: 100%;
     text-align: center;
-    padding: 10px 0;
   }
-
-  /* Mostrar el menú cuando está activo */
-  #navbar.active {
-    display: flex;
-  }
-
-  /* Mostrar el ícono ☰ en celular */
-  .menu-toggle {
-    display: block;
-  }
-
-  #navbar a {
-    display: block;
-    padding: 12px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-  }
+  #navbar.active { display: flex; }
+  .menu-toggle { display: block; }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -137,10 +140,62 @@ nav a:hover {
 }
 
 /* ===== CONTENIDO PRINCIPAL ===== */
-main {
-  padding: 1rem;
-  height: 100%;
+
+
+
+/* HERO */
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 85vh; /* alto del hero */
+  overflow: hidden;
 }
+
+.hero img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* hace que la imagen se adapte bien */
+  filter: brightness(0.3); /* oscurece un poco la imagen para que resalte el texto */
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: #24d57f;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.hero-text .btn {
+  background: #2C7351;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.hero-text .btn:hover {
+  background-color: #24b865;
+}
+
 
 h2 {
   border-bottom: 5px solid #2C7351;
@@ -154,6 +209,17 @@ h2 {
 
 
 /* ===== TARJETAS DE PRODUCTO ===== */
+
+/* TITULOS */
+.titulo-seccion {
+  text-align: center;
+  margin: 40px 0 20px;
+  font-size: 2rem;
+  color: #1a7248;
+  letter-spacing: 2px;
+}
+
+/* ==== TARJETAS ==== */
 .productos {
   display: flex;
   flex-wrap: wrap;           /* permite que los productos bajen de fila */
@@ -182,7 +248,40 @@ h2 {
   height: auto;             /* altura fija */
   object-fit: cover;         /* recorta si no encaja */
   border-radius: 5px;
+  display: block;
 }
+/* ETIQUETA STOCK GENERAL */
+.stock {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+/* VERDE = DISPONIBLE */
+.stock.disponible {
+  background-color: rgba(10, 52, 26, 0.9); /* verde oscuro */
+}
+
+/* ROJO = SIN STOCK */
+.stock.sin-stock {
+  background-color: rgba(180, 0, 0, 0.9); /* rojo con transparencia */
+}
+.producto img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 3px; /* separa un poquito la imagen del texto “Disponible” */
+}
+
 
 
 /* Texto dentro de la tarjeta */
@@ -190,27 +289,30 @@ h2 {
   margin: 9px 0 5px;
   color: #1a7248;            /* verde como el header */
   font-size: 1rem;
+  text-align: start;
 }
 
 .producto p {
   margin: 10px 0;
   font-size: 15px;
+    text-align: start;
+
 }
 
-/* ===== ESTILOS ESPECÍFICOS ===== */
 
-/* Equipo y Talle en gris suave */
+/* ===== ESTILOS ESPECÍFICOS ===== */
 .producto p.equipo,
 .producto p.talle {
   color: #555;
   font-weight: normal;
+  text-align: start;
 
 }
 
 .info {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
   flex-direction: column;
   background-color: #fff;
   color: black;
@@ -221,41 +323,15 @@ h2 {
 }
 
 
-footer {
-  background: linear-gradient(90deg, #3C8D68, #2C7351);
-  color: #fff;
-  text-align: center;
-  padding: 2rem;
- 
-}
 
 
-/* STYLE A EL STOCK */
-.stock {
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 5px;
-}
 
-/* Disponible */
-.info .stock.disponible {
-  color: #1e7a46;
-  background-color: #e3f9eb;
-}
 
-/* Sin stock */
-.info .stock.sin-stock {
-  color: #a31414;
-  background-color: #fde0e0;
-}
 
 /* ===== CONTACTO ===== */
 #contacto {
   text-align: center;
   margin-top: 1rem;
-  border-radius: 10px;
   height: 30%;
 }
 
@@ -263,15 +339,15 @@ footer {
   display: inline-block;
   margin: 0.5rem 1rem;
   color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+  padding: 1rem 1rem;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s;
 }
 
 .redes a:hover {
-  color: #000000;
+  color: #2C7351;
+
 }
 
 /* ===== WHATSAPP FIJO ===== */
@@ -283,10 +359,10 @@ footer {
 }
 
 .wspfijo img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 8px rgba(0,0,0,0.3);
   animation: parpadeo 1.2s infinite;
 }
 
@@ -298,8 +374,13 @@ footer {
 
 
 /* ===== FOOTER ===== */
-
-
+footer {
+  background: rgba(20, 20, 20, 0.95);
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+ 
+}
 footer a {
   color: #ffffff;
   text-decoration: none;
@@ -310,17 +391,17 @@ footer a:hover {
   text-decoration: underline;
 }
 
- div.info{
+div.info{
     color: white;
-  }
-  #footerp{
+}
+#footerp{
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-  }
+}
 
-   .redes a {
+.redes a {
       display: inline-block;
       margin: 0.5rem 1rem;
       color: #fff;
@@ -329,8 +410,7 @@ footer a:hover {
       border-radius: 5px;
       text-decoration: none;
       transition: all 0.3s;
-    }
-
+}
 
 
     /* Botón para volver arriba */
@@ -394,6 +474,7 @@ footer a:hover {
 .cerrar:hover {
   color: #bbb;
 }
+
 
 
     /* ===== RESPONSIVE ===== */

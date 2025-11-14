@@ -139,12 +139,76 @@ nav a {
 nav a:hover {
   color: #004c03;
 }
-
-/* ===== CONTENIDO PRINCIPAL ===== */
-
+/* ----- ENCARGOS ----- */
 
 
-/* HERO */
+h4 , p {
+  color:#333 ;
+  text-align: center;
+  margin: 18px;
+}
+
+.encargos-info ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Cada item elegante */
+.encargos-info ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  background: #ffffff;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+
+  font-size: 1rem;
+  line-height: 1.45;
+  color: #333;
+  transition: all 0.25s ease;
+}
+
+/* Hover profesional */
+.encargos-info ul li:hover {
+  border-color: #2ad177;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+  transform: translateX(3px);
+}
+
+/* Emoji alineado y sin romper texto */
+.encargos-info ul li .emoji {
+  font-size: 1.35rem;
+  line-height: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e9faf1;
+  color: #1a7248;
+  padding: 6px;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* Strong profesional */
+.encargos-info strong {
+  font-weight: 700;
+  color: #1a7248;
+  font-size: 1rem;
+}
+
+
+
+/*------------------ HERO------------------------- */
 .hero {
   position: relative;
   width: 100vw;
@@ -380,8 +444,10 @@ footer {
   color: #fff;
   text-align: center;
   padding: 2rem;
+  
  
 }
+
 footer a {
   color: #ffffff;
   text-decoration: none;

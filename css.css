@@ -235,16 +235,17 @@ h4 , p {
 }
 
 .hero h2 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   color: #24d57f;
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 1.5rem;
   color: white;
+  text-align: center;
 }
 
 .hero-text .btn {
@@ -263,12 +264,11 @@ h4 , p {
 
 
 h2 {
-  border-bottom: 5px solid #2C7351;
+  border-bottom: 4px solid #2C7351;
   color: #2C7351;
   display: flex;
   justify-content: center;
-  font-size: 1.8rem;
-  padding: 12px;
+  font-size: 1rem;
   text-transform: uppercase;
 }
 

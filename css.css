@@ -53,7 +53,8 @@ header h1 span {
 /* NAV */
 #navbar {
   display: flex;
-  gap: 20px;
+  gap: 30px;
+  padding: 10px;
 }
 
 #navbar a {

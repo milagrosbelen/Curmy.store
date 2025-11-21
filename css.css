@@ -352,7 +352,7 @@ h2 {
 /* Texto dentro de la tarjeta */
 .producto h3 {
   margin: 9px 0 5px;
-  color: #1a7248;            /* verde como el header */
+  color: #1a7248;/* verde como el header */
   font-size: 1rem;
   text-align: start;
 }

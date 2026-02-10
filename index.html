@@ -6,6 +6,7 @@
   <title>Catálogo Curmy.Store</title>
   <link rel="stylesheet" href="css.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="catalogo.js" defer></script>
 </head>
 <body>
 
@@ -21,7 +22,6 @@
     </div>
 
     <nav id="navbar">
-      <a href="index.html">Inicio</a>
       <a href="remeras.html">Remeras de futbol</a>
       <a href="shorts-futbol.html">Shorts de Fútbol</a>
       <a href="shorts-casual.html">Shorts Casual</a>
@@ -43,8 +43,11 @@
   </section>
 
   <!-------------------------------------------------------- REMERAS -->
-  <section id="remeras">
-        <h2 class="titulo-seccion">Remeras</h2> 
+  <section id="remeras" class="categoria-seccion">
+        <h2 class="titulo-seccion">
+          <span>Remeras</span>
+          <button class="toggle-btn" aria-label="Colapsar/Expandir sección">−</button>
+        </h2> 
       <div class="productos">
   
 
@@ -98,6 +101,7 @@
             <h3> Versión Jugador con dorsal - Barsa</h3>
             <p><strong>Talle:</strong> M</p>
             <p class="precio">$62.000</p>
+            <span class="stock sin-stock">SIN STOCK</span>
           </div>
       </div>
 
@@ -265,8 +269,11 @@
   </section>
   
   <!-------------------------------------------------------- SHORTS DE FUTBOL -->
-   <section id="shorts-futbol">
-      <h2 class="titulo-seccion">SHORTS DE FUTBOL</h2> 
+   <section id="shorts-futbol" class="categoria-seccion">
+      <h2 class="titulo-seccion">
+        <span>SHORTS DE FUTBOL</span>
+        <button class="toggle-btn" aria-label="Colapsar/Expandir sección">−</button>
+      </h2> 
     <div class="productos">
 
 
@@ -447,8 +454,11 @@
     </div>
   </section>
 <!----------------------------------------------------------- SHORTS CASUAL -->
-    <section id="shorts-andar">
-      <h2 class="titulo-seccion">Shorts Casual</h2>
+    <section id="shorts-andar" class="categoria-seccion">
+      <h2 class="titulo-seccion">
+        <span>Shorts Casual</span>
+        <button class="toggle-btn" aria-label="Colapsar/Expandir sección">−</button>
+      </h2>
       <div class="productos">
          
 
@@ -459,6 +469,7 @@
             <h3> Shorts Tech</h3>
             <p><strong>Talle:</strong> L</p>
             <p class="precio">$50.000</p>
+            <span class="stock sin-stock">SIN STOCK</span>
           </div>
       </div>
       <div class="producto">
@@ -624,61 +635,53 @@
 
 
 <footer>
-    <!-- CONTACTO -->
-    <section id="contacto">
-      <h3>Contacto</h3>
-      <div class="redes">
-        <a href="https://www.instagram.com/curmy.store" target="_blank"  >Instagram</a>
-        <a href="https://wa.me/543515223831" target="_blank">WhatsApp</a>
-      </div>
-    </section>
- 
-      <!-- Botón para volver arriba -->
-  <button id="btnSubir" title="Volver arriba">↑</button>
-
-  <div class="wspfijo">
-      <a href="https://wa.me/543515223831" target="_blank">
-      <img src="img-logos/wsp-removebg-preview.png" alt="WhatsApp">
-    </a>
+  <div class="footer-contenido">
+    <div class="footer-marca">
+      <h2 class="footer-titulo">Curmy<span>.Store</span></h2>
+      <p class="footer-descripcion">Catálogo de indumentaria deportiva y urbana con estilo profesional</p>
+    </div>
+    
+    <div class="footer-contacto">
+      <a href="https://wa.me/543515223831" target="_blank" class="btn-whatsapp">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        Contactar por WhatsApp
+      </a>
+    </div>
   </div>
   
-    <p id="footerp">© 2025 | Curmy.Store </p>
+  <div class="footer-bottom">
+    <p class="footer-copyright">© 2025 Curmy.Store - Todos los derechos reservados</p>
+  </div>
+
+  <!-- Botón para volver arriba -->
+  <button id="btnSubir" title="Volver arriba" aria-label="Volver arriba"></button>
 </footer>
 
-<!-- Modal para ver imágenes -->
-<div id="modal" class="modal">
-  <span class="cerrar">&times;</span>
-  <img class="modal-contenido" id="imgAmpliada">
+<!-- Modal para información de producto con talles -->
+<div id="modal-producto" class="modal-producto">
+  <div class="modal-producto-contenido">
+    <button class="modal-cerrar" id="cerrar-modal-producto">&times;</button>
+    <div class="modal-producto-imagen">
+      <img id="modal-img" src="" alt="">
+    </div>
+    <div class="modal-producto-info">
+      <h3 id="modal-nombre"></h3>
+      <p class="modal-precio" id="modal-precio"></p>
+      <p class="modal-stock" id="modal-stock" style="display: none;"></p>
+      <div class="modal-talles-container">
+        <p class="modal-talles-titulo">Talles disponibles:</p>
+        <div class="modal-talles" id="modal-talles"></div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
 <script>
-
- // Selecciona todas las imágenes dentro de productos
-  const imagenes = document.querySelectorAll(".producto img");
-  const modal = document.getElementById("modal");
-  const imgAmpliada = document.getElementById("imgAmpliada");
-  const cerrar = document.querySelector(".cerrar");
-
-  // Cuando se hace clic en una imagen, se muestra en grande
-  imagenes.forEach(img => {
-    img.addEventListener("click", () => {
-      modal.style.display = "flex";
-      imgAmpliada.src = img.src;
-    });
-  });
-
-  // Cierra el modal al hacer clic en la cruz
-  cerrar.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-
-  // Cierra el modal si se toca fuera de la imagen
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
-  });
+  // Script para funcionalidades generales (menú, scroll, etc.)
+  // El modal de productos se maneja en catalogo.js
 
   const menuToggle = document.getElementById("menu-toggle");
   const navbar = document.getElementById("navbar");
@@ -699,7 +702,7 @@
   const btnSubir = document.getElementById("btnSubir");
   window.addEventListener("scroll", () => {
     if (window.scrollY > 300) { 
-      btnSubir.style.display = "block";
+      btnSubir.style.display = "flex";
     } else {
       btnSubir.style.display = "none";
     }
